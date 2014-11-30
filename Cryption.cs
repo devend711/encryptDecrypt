@@ -85,15 +85,5 @@ namespace Encryption
                 return;
             }
         }
-
-        private bool overwrite(string fileName)
-        {
-            if (File.Exists(fileName))
-            {
-                var shouldOverwrite = MessageBox.Show("Output file exists. Overwrite?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                return shouldOverwrite == DialogResult.Yes;
-            }
-            return true;
-        }
     }
 }
